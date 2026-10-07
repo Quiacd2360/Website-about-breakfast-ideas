@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.hero-section .hero-details .hero-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+:root {
+  /* Kho màu*/
+  --orange-color: #e28743;
+  --secondary-color: #1e1e2d;
+  --white-color: #fff;
+  --dark-color: #252525;
+  --light-pink-color: #faf4f5;
+  --plum-color: #5b3f86;
+  --medium-gray-color: #ccc;
+  --honeydew-color: #ecf5e2;
+
+  /* Cỡ chữ*/
+  --font-size-small: 0.9rem;
+  --font-size-normal: 1rem;
+  --font-size-medium: 1.12rem;
+  --font-size-large: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+
+  /* Đậm nhạt chữ*/
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Bán kính bo góc*/
+  --border-radius-small: 8px;
+  --border-radius-medium: 30px;
+  --border-radius-large: 50%;
+
+  /* Khoảng cách site*/
+  --site-max-width: 1300px;
+}
+/* Kiểu cho nguyên trang */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+}
+.section-content {
+  max-width: var(--site-max-width);
+  margin: 0 2rem;
+  padding: 0 20px;
+}
+/* kiểu thanh điều hướng */
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background-color: var(--orange-color);
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin: 0 2rem;
+}
+.navbar .nav-logo .logo-text {
+  color: var(--white-color);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+.navbar .nav-menu {
+  display: flex;
+  gap: 10px;
+}
+.navbar .nav-menu .nav-link {
+  color: var(--white-color);
+  border-radius: var(--border-radius-medium);
+  padding: 10px 18px;
+  font-size: var(--font-size-medium);
+  transition: 0.3s ease;
+}
+.navbar .nav-menu .nav-link:hover {
+  color: var(--primary-color);
+  background: var(--white-color);
+}
+/* Kiểu cho phần hero */
+.hero-section {
+  min-height: 100vh;
+  align-items: center;
+}
+.hero-section .section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.hero-section .hero-details .hero-title {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 11em;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+}
+.section-content .hero-details .tag {
+  display: inline-block;
+  background-color: var(--plum-color);
+  color: var(--white-color);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-medium);
+  margin-bottom: 1rem;
+}
+.hero-details .button {
+  display: flex;
+  font-weight: 600;
+  gap: 2rem;
+}
+.button .btn-1 {
+  background-color: var(--plum-color);
+  color: var(--white-color);
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius-medium);
+}
+.button .btn-2 {
+  color: var(--plum-color);
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius-medium);
+  border: 2px solid var(--plum-color);
+}

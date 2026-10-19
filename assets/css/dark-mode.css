@@ -1,0 +1,273 @@
+/*----------- Giao diện tối ----------*/
+/* ---------- Nút đổi giao diện ---------- */
+.theme-toggle {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 0;
+  background: #fff;
+  color: #2f2540;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.2s ease,
+    background-color 0.3s ease;
+}
+.theme-toggle:hover {
+  transform: scale(1.08);
+}
+
+/* ---------- Bảng màu tối ---------- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  background: #0f1e36;
+
+  --bg-page: #0f1e36; /* nền trang: xanh đậm */
+  --text-dark: #e8eef7;
+  --text-light: #a7b6cc;
+
+  --about-cream: #0f1e36;
+  --about-white: #182c4a; /* nền thẻ */
+  --about-muted: #a7b6cc;
+  --about-border: #28405f;
+  --about-orange-dark: #f2a566;
+  --about-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+
+  --paper: #0d1a30; /* ô lõm bên trong thẻ */
+  --ink: #eaf1fb;
+  --card: #182c4a;
+  --muted: #a7b6cc;
+  --line: #ffffff1f;
+  --plum: #8d73c7;
+  --time: #b79ae8;
+  --level: #5fd0ac;
+  --taste: #f5a85f;
+  --kcal: #7fb6f0;
+  --diet: #98d45f;
+}
+
+:root[data-theme="dark"] body {
+  background: var(--bg-page);
+  color: var(--text-dark);
+}
+
+/* ---------- Thanh điều hướng ---------- */
+:root[data-theme="dark"] header,
+:root[data-theme="dark"] header .navbar {
+  background-color: #10213b !important;
+}
+:root[data-theme="dark"] header {
+  border-bottom: 1px solid #22395a;
+}
+:root[data-theme="dark"] .navbar .nav-logo .logo-text,
+:root[data-theme="dark"] .navbar #menu-open-button {
+  color: #fff;
+}
+:root[data-theme="dark"] .navbar .nav-menu .nav-link:hover,
+:root[data-theme="dark"] .navbar .nav-menu .nav-link[aria-current="page"] {
+  background: var(--orange-color);
+  color: #fff;
+}
+@media (max-width: 900px) {
+  :root[data-theme="dark"] .navbar .nav-menu {
+    background-color: #12253f;
+    border-right: 1px solid #28405f;
+    box-shadow: 12px 0 32px rgba(0, 0, 0, 0.35);
+  }
+  :root[data-theme="dark"] .navbar .nav-menu .nav-link {
+    color: #e8eef7;
+  }
+  :root[data-theme="dark"] .navbar #menu-close-button {
+    color: #fff;
+  }
+  :root[data-theme="dark"] body.show-mobile-menu header::before {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+/* ---------- Hero ---------- */
+:root[data-theme="dark"] .featured {
+  background: rgba(20, 36, 62, 0.92);
+  color: #eaf1fb;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+:root[data-theme="dark"] .quote-band {
+  background-color: #0a1527;
+}
+
+/* ---------- About ---------- */
+:root[data-theme="dark"] .page-hero {
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(249, 199, 79, 0.1),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(226, 135, 67, 0.1),
+      transparent 28%
+    ),
+    linear-gradient(135deg, #13264a 0%, #0f1e36 55%, #12294a 100%);
+}
+:root[data-theme="dark"] .values-section {
+  background: #0c192e;
+}
+:root[data-theme="dark"] .feature-card {
+  background: linear-gradient(145deg, #1b3354, #142640 75%);
+  border-color: #2a4468;
+}
+:root[data-theme="dark"] .feature-emoji {
+  background: #1d3558;
+}
+:root[data-theme="dark"] .primary-button:hover {
+  color: var(--about-orange);
+}
+
+/* ---------- Menu ---------- */
+:root[data-theme="dark"] .card {
+  color: var(--text-dark);
+}
+:root[data-theme="dark"] .chip {
+  color: var(--text-dark);
+}
+:root[data-theme="dark"] .chip[aria-pressed="true"] {
+  background: var(--ink);
+  color: #0f1e36;
+}
+:root[data-theme="dark"] .thumb {
+  /* màu pastel riêng của từng món, pha tối đi */
+  background: color-mix(in srgb, var(--bg) 22%, var(--card));
+}
+:root[data-theme="dark"] .more {
+  color: var(--yolk);
+}
+:root[data-theme="dark"] .tag.time {
+  color: var(--time);
+}
+:root[data-theme="dark"] .tag.level {
+  color: var(--level);
+}
+:root[data-theme="dark"] .tag.taste {
+  color: var(--taste);
+}
+:root[data-theme="dark"] .tag.kcal {
+  color: var(--kcal);
+}
+:root[data-theme="dark"] .tag.diet,
+:root[data-theme="dark"] .tag.diet-label {
+  color: var(--diet);
+}
+:root[data-theme="dark"] .tag.hl {
+  background: #7a5fb5;
+  color: #fff;
+}
+:root[data-theme="dark"] .tag.new {
+  color: #3a1500;
+}
+:root[data-theme="dark"] .steps li::before {
+  background: #7a5fb5;
+}
+:root[data-theme="dark"] .video {
+  background: #0b1730;
+  color: #eaf1fb;
+}
+:root[data-theme="dark"] .video a {
+  background: var(--yolk);
+  color: #2f2540;
+}
+
+/* ---------- Testimonials ---------- */
+:root[data-theme="dark"] .testimonials-section .section-title,
+:root[data-theme="dark"] .testimonial-card .name {
+  color: var(--text-dark);
+}
+:root[data-theme="dark"] .testimonial-card .feedback {
+  color: #b8c6da;
+}
+:root[data-theme="dark"] .testimonial-arrow {
+  background: var(--card);
+  color: #7fb6f0;
+}
+:root[data-theme="dark"] .testimonial-slider-dot:not(.is-active) {
+  background: #34506f;
+}
+
+/* ---------- Contact, mạng xã hội, thành viên, footer ---------- */
+:root[data-theme="dark"] .contact-section {
+  background:
+    radial-gradient(
+      circle at 12% 15%,
+      rgba(249, 199, 79, 0.08),
+      transparent 26%
+    ),
+    #0f1e36;
+}
+:root[data-theme="dark"] .contact-section .section-title,
+:root[data-theme="dark"] .member-section h3,
+:root[data-theme="dark"] .member-name {
+  color: var(--text-dark);
+}
+:root[data-theme="dark"] .contact-info-list {
+  background: #12253f;
+  border-color: #28405f;
+}
+:root[data-theme="dark"] .contact-info-item {
+  background: rgba(255, 255, 255, 0.05);
+  color: #c9d5e6;
+}
+:root[data-theme="dark"] .contact-form {
+  background: var(--card);
+  border-color: #28405f;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+}
+:root[data-theme="dark"] .contact-form input,
+:root[data-theme="dark"] .contact-form textarea {
+  background: #0f1e36;
+  border-color: #2d4669;
+  color: var(--text-dark);
+}
+:root[data-theme="dark"] .contact-form input::placeholder,
+:root[data-theme="dark"] .contact-form textarea::placeholder {
+  color: #7d8fa9;
+}
+:root[data-theme="dark"] .contact-form input:focus,
+:root[data-theme="dark"] .contact-form textarea:focus {
+  border-color: var(--orange-color);
+}
+:root[data-theme="dark"] .member-section {
+  background: #0f1e36;
+}
+:root[data-theme="dark"] .member-list li {
+  background: var(--card);
+  border-color: #28405f;
+}
+:root[data-theme="dark"] .member-id {
+  color: #9fb0c8;
+}
+:root[data-theme="dark"] main > footer {
+  background: #08111f;
+}
+
+/* ---------- Trang Sitemap (nếu dùng chung file CSS) ---------- */
+:root[data-theme="dark"] .sitemap-card {
+  color: var(--text-dark);
+}
+:root[data-theme="dark"] .sitemap-card:hover {
+  border-color: var(--orange-color);
+}
+:root[data-theme="dark"] .note {
+  background: #1a2d4b;
+  color: #c9d5e6;
+}
+:root[data-theme="dark"] .site-footer {
+  background: #08111f;
+}

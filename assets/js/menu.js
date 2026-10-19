@@ -1,4 +1,4 @@
-/* ===== DATA: edit dishes here. "video" = link to your tutorial video ===== */
+/* ===== Dữ liệu khởi tạo menu ===== */
 const DISHES = [
   {
     id: "banh-mi",
@@ -763,7 +763,7 @@ grid.addEventListener("click", (e) => {
     : "View recipe ↓";
 });
 
-/* ===== Favorites: saved in this browser (localStorage) ===== */
+/* ===== Mục yêu thích lưu ở web ===== */
 const KEY = "breakfast-favs";
 let favs = new Set(),
   cur = "all";

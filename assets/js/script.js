@@ -2,18 +2,23 @@ const menuOpenButton = document.querySelector("#menu-open-button");
 const menuCloseButton = document.querySelector("#menu-close-button");
 const menuOverlay = document.querySelector("#menu-overlay");
 
-menuOpenButton.addEventListener("click", () => {
-  // Hiển thị mobile menu
-  document.body.classList.toggle("show-mobile-menu");
-});
+if (menuOpenButton) {
+  menuOpenButton.addEventListener("click", () => {
+    document.body.classList.toggle("show-mobile-menu");
+  });
+}
 
-menuCloseButton.addEventListener("click", () => {
-  document.body.classList.remove("show-mobile-menu");
-});
+if (menuCloseButton) {
+  menuCloseButton.addEventListener("click", () => {
+    document.body.classList.remove("show-mobile-menu");
+  });
+}
 
-menuOverlay.addEventListener("click", () => {
-  document.body.classList.remove("show-mobile-menu");
-});
+if (menuOverlay) {
+  menuOverlay.addEventListener("click", () => {
+    document.body.classList.remove("show-mobile-menu");
+  });
+}
 
 const testimonialViewport = document.querySelector(".testimonials-list");
 const testimonialCards = document.querySelectorAll(".testimonial-card");
@@ -53,19 +58,23 @@ if (
     });
   });
 
-  previousTestimonialButton.addEventListener("click", () => {
-    const activeIndex = Array.from(testimonialDots).findIndex((dot) =>
-      dot.classList.contains("is-active"),
-    );
-    scrollToTestimonial(Math.max(0, activeIndex - 1));
-  });
+  if (previousTestimonialButton) {
+    previousTestimonialButton.addEventListener("click", () => {
+      const activeIndex = Array.from(testimonialDots).findIndex((dot) =>
+        dot.classList.contains("is-active"),
+      );
+      scrollToTestimonial(Math.max(0, activeIndex - 1));
+    });
+  }
 
-  nextTestimonialButton.addEventListener("click", () => {
-    const activeIndex = Array.from(testimonialDots).findIndex((dot) =>
-      dot.classList.contains("is-active"),
-    );
-    scrollToTestimonial(Math.min(testimonialCards.length - 1, activeIndex + 1));
-  });
+  if (nextTestimonialButton) {
+    nextTestimonialButton.addEventListener("click", () => {
+      const activeIndex = Array.from(testimonialDots).findIndex((dot) =>
+        dot.classList.contains("is-active"),
+      );
+      scrollToTestimonial(Math.min(testimonialCards.length - 1, activeIndex + 1));
+    });
+  }
 
   testimonialViewport.addEventListener("scroll", () => {
     const viewportCenter =

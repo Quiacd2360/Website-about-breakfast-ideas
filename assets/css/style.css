@@ -1380,7 +1380,7 @@ body {
     height: 100px;
   }
 }
-
+/* Testimonials*/
 .testimonials {
   padding: clamp(56px, 8vw, 88px) 24px;
   background: #fff7eb;
